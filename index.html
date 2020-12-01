@@ -8,6 +8,18 @@ body {
   font-family: "Lato", sans-serif;
   background-color: rgb(86, 133, 160);
 }
+body, html {
+  height: 100%;
+  margin: 0;
+}
+body {
+        background-image:url("page.jpg");
+        
+        height: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
 
 .sidenav {
   height: 100%;
@@ -23,7 +35,7 @@ body {
 }
 .front{
     text-align:center;
-    color:rgb(15, 15, 15);
+    color:rgb(241, 235, 235);
     font-size:50px;
     font-family:Arial Narrow Bold;
     padding: 8px 8px 8px 32px;
@@ -61,6 +73,7 @@ body {
 #main {
   transition: margin-left .5s;
   padding: 16px;
+  color:cornsilk;
 }
 
 @media screen and (max-height: 450px) {
@@ -82,8 +95,8 @@ body {
 <div id="main">
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 </div>
-<div class="front">Home page</div>
-<div class="page">This is a portfolio of a student. It consist of student details and their projects.</div>
+<div class="front">Welcome to website</div>
+<div class="page"><br/>This website is portfolio of Student.</div>
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
