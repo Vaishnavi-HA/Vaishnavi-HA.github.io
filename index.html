@@ -1,42 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaishnavi's portfolio</title>
-    <style type="text/css">
-   
-    h1.class{text-align:center;font-style:bold;font-size:150%;color:rgb(14, 155, 236);font-style:italic;}
-    
-    
-    p.solid {border-bottom-style: solid;border-bottom-color:rgb(243, 177, 177);border-bottom-width:1mm;text-align:center; }
-    p.details{font-size:110%; color:rgb(245, 238, 238);font-family:Cambria;text-align:center;font-family:cambria; }
-    h2.about{font-size:150%;font-variant: bold;font-style:italic;color:grey;text-align:center; }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<style type="text/css">
+body {
+  font-family: "Lato", sans-serif;
+  background-color: rgb(86, 133, 160);
+}
 
-    a:visited { color:khaki; }
-    a:hover {
-  color: skyblue;
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
-    body {
-        background-image:url("finalimage.jpg");
- 
+.front{
+    text-align:center;
+    color:rgb(15, 15, 15);
+    font-size:50px;
+    font-family:Arial Narrow Bold;
+    padding: 8px 8px 8px 32px;
+    position:-ms-page;
 }
-.center {
+.page{
+    text-align:center;
+    color:rgb(241, 219, 219);
+    font-size:20px;
+    font-family:'Times New Roman';
+    padding: 8px 8px 8px 32px;
+    position:-ms-page;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #cec1c1;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #eeb8b8;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
 </style>
 </head>
 <body>
-    
-<p class="image"><img src="image.png" height="150" width="150" class="center"/></p>
-<h1 class="class"><strong>Hello..I am Vaishnavi H A</strong></h1><br/><br/><br/>
-<h2 class="about">About Me:</h2>
-<p class="solid"></p>
-<p class="details">I am studying BE in computer science.Now I am in 3rd year.<br/>I am pursing my engineering in Dr Ambedkar institute of technology Bangalore.<br/><br/><br/>I have interest in the web development and the coding. It will give more happiness to me while learning new things.<br/> I raised in Nagara which is there in Shimoga district. I love greenery and travelling. My hobbies is reading novel,art and craft.<br/></p>
 
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">About</a>
+  <a href="details.html">Contact</a>
+  <a href="project.html">Project</a>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+</div>
+<div class="front">Home page</div>
+<div class="page">This is a portfolio of a student. It consist of student details and their projects.</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+</script>
+   
 </body>
-</html>
+</html> 
